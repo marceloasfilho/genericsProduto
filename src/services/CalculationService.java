@@ -8,7 +8,7 @@ import java.util.List;
 public class CalculationService {
     private List<Produto> produtos;
 
-    public CalculationService (){
+    public CalculationService() {
         produtos = new ArrayList<>();
     }
 
@@ -24,12 +24,12 @@ public class CalculationService {
         this.produtos = produtos;
     }
 
-    public Produto maxExpensive(List<Produto> produtos){
-        Produto max = produtos.get(0);
+    public <T extends Comparable<T>> T max(List<T> lista) {
+        T max = lista.get(0);
 
-        for (Produto produto : produtos){
-            if (produto.compareTo(max) > 0){
-                max = produto;
+        for (T item : lista) {
+            if (item.compareTo(max) > 0) {
+                max = item;
             }
         }
         return max;

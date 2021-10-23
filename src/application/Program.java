@@ -15,7 +15,7 @@ public class Program {
 
         CalculationService cs = new CalculationService(produtos);
 
-        Produto maisCaro = cs.maxExpensive(produtos);
+        Produto maisCaro = cs.max(produtos);
         System.out.println(maisCaro.toString());
     }
 }
