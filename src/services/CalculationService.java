@@ -24,7 +24,7 @@ public class CalculationService {
         this.produtos = produtos;
     }
 
-    public <T extends Comparable<T>> T max(List<T> lista) {
+    public <T extends Comparable<? super T>> T max(List<T> lista) {
         T max = lista.get(0);
 
         for (T item : lista) {
