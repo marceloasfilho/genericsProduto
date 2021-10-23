@@ -26,7 +26,15 @@ public class Produto implements Comparable<Produto> {
     }
 
     @Override
-    public int compareTo(Produto other) {
-        return this.preco.compareTo(other.getPreco());
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Produto outro) {
+        return this.preco.compareTo(outro.getPreco());
     }
 }

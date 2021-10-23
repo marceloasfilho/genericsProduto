@@ -6,7 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CalculationService {
-    private List<Produto> produtos = new ArrayList<Produto>();
+    private List<Produto> produtos;
+
+    public CalculationService (){
+        produtos = new ArrayList<>();
+    }
 
     public CalculationService(List<Produto> produtos) {
         this.produtos = produtos;
@@ -24,7 +28,7 @@ public class CalculationService {
         Produto max = produtos.get(0);
 
         for (Produto produto : produtos){
-            if (max.compareTo(produto) > 0){
+            if (produto.compareTo(max) > 0){
                 max = produto;
             }
         }
